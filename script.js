@@ -2,15 +2,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggleButton');
   const formContainer = document.getElementById('formContainer');
-  const form = document.getElementById('formContainer');
 
   toggleButton.addEventListener('click', () => {
-      if (formContainer.classList.contains('hidden')) {
-          formContainer.classList.remove('hidden');
+      if (formContainer.style.display === 'none') {
+          formContainer.style.display = 'block';
       } else {
-          formContainer.classList.add('hidden');
+          formContainer.style.display = 'none';
       }
   });
+
+  // 초기 상태 설정: 폼을 표시
+  formContainer.style.display = 'block';
+
+  const form = document.getElementById('formContainer');
+
 
   form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -30,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(result => {
           console.log('Success:', result);
+          console.dir(formContainer)
       })
       .catch(error => {
           console.error('Error:', error);
