@@ -28,6 +28,9 @@ body {
   cursor: pointer;
 }
 
+#formContainer.hidden {
+  display: none;
+}
 
 #titleInput, #contentInput {
   width: 100%;
