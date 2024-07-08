@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.json())
       .then(result => {
           console.log('Success:', result);
-          console.dir(formContainer)
       })
       .catch(error => {
           console.error('Error:', error);
