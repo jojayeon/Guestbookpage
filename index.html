@@ -4,9 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-
+  <div id="root">
+    <button id="toggleButton" class="close">X</button>
+    <form id="formContainer" class="hidden">
+        <input type="text" id="titleInput" placeholder="제목" required />
+        <textarea id="contentInput" placeholder="내용" required></textarea>
+        <button type="submit" id="submitButton">저장</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
