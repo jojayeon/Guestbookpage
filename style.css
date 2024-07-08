@@ -28,10 +28,6 @@ body {
   cursor: pointer;
 }
 
-#formContainer.hidden {
-  display: none;
-}
-
 #titleInput, #contentInput {
   width: 100%;
   margin: 10px 0;
